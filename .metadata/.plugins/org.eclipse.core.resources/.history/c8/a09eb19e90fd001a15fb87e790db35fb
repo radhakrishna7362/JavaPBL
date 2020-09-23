@@ -1,0 +1,20 @@
+package enduser;
+
+public class SampleUser {
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Lecture l1=new Lecture();
+		Student s1=new Student(190050110, "Krishna", "Gudivada");
+		Student s2=new Student(190050110, "Krishna", "Vaddeswaram");
+		Student s3=new Student(190031616,"Krishna ", "Agra");
+		l1.addStudent(s1);
+		l1.addStudent(s2);
+		l1.addStudent(s3);
+		
+		System.out.println(l1);
+		l1.sort();
+		System.out.println("*****Sorted by Name and Location*****");
+		System.out.println(l1);
+	}
+}

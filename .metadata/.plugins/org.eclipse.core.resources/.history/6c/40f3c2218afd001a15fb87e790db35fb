@@ -1,0 +1,83 @@
+package collector;
+
+import java.util.*;
+import entity.Student;
+public class lecture {
+//	private static Scanner  sc = new Scanner(System.in);
+//	private static ArrayList<Student> al = new ArrayList<Student>();
+//	public static void main(String[] args) {
+//		boolean repeat = true;
+//		while(repeat) {
+//				switch(mainMenu()) {
+//					case 1: insertStudent();
+//							break;
+//					case 2: displayStudentDetails();
+//							break;
+//					case 3: sortStudents();
+//							break;
+//					default: repeat = false;
+//				}
+//		}
+//	}
+//	private static void insertStudent() {
+//		System.out.println("Enter Student Id");
+//		int id=sc.nextInt();
+//		System.out.println("Enter Student Name");
+//		String name=sc.next();
+//		System.out.println("Enter Student Gender");
+//		String gender=sc.next();
+//		System.out.println("Enter Student Location");
+//		String location=sc.next();
+//		System.out.println("Enter Student Postcode");
+//		int postcode=sc.nextInt();
+//		Student c = new Student(id,name,gender,location,postcode);
+//		al.add(c);
+//		
+//	}
+//   private static int mainMenu() {
+//		System.out.println("1.Add Student");
+//		System.out.println("2.Display Students");
+//		System.out.println("3.Sort Students");
+//		System.out.println("Enter any other number to exit");
+//		return sc.nextInt();
+//	}
+//   private static void sortStudents() {
+//	   	Collections.sort(al);
+//		System.out.println(al);
+//	}
+//	private static void displayStudentDetails() {
+//		System.out.println(al);
+//	}
+//   public String toString() {
+//	   String out="";
+//	   for(int i=0;i<count;i++)
+//		   out+=this.al.get(i).toString();
+//	   return out;
+//   }
+	
+	private ArrayList<Student> lec;
+	
+	public lecture() {
+		new ArrayList<Student>();
+	}
+	
+	public boolean addStudent(Student s) {
+		if(s!=null) {
+			lec.add(s);
+			return true;
+		}
+		return false;
+	}
+	
+	public String toString() {
+		String out="";
+		for(Student s:lec) {
+			out+=s.toString();
+		}
+		return out;
+	}
+	
+	public void sortStudents() {
+	   	Collections.sort(lec);
+	}
+}
